@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.block {
+  position: relative;
+  margin: 300px auto 0;
+  width: 400px;
+  height: 200px;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before,
+.block:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 300%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+.riti {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 6%;
+}
+h2,
+h3 {
+  color: cyan;
+  padding-left: 5px;
+}
+
+/* new */
+/* .typist {
+  position: absolute;
+  top: 50px;
+  right: 10%;
+} */
+.typis-head {
+  color: #07ffff;
+  font-size: 23px;
+  font-weight: bold;
+}
+.typis-display {
+  color: #66ffff;
+  font-size: 20px;
+}
